@@ -1,0 +1,60 @@
+{
+  "name": "stater-cli",
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.15.4",
+  "description": "Starter cli is a command line to make boilerplate with your favorite,tools",
+  "author": {
+    "name": "Sebastián García",
+    "email": "castrogarcia.mjs@gmail.com",
+    "url": "https://castrogarciajs.dev"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/castrogarciajs/starter-cli",
+  "homepage": "https://github.com/castrogarciajs/stater-cli/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castrogarciajs/starter-cli",
+    "directory": "castrogarciajs/starter-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/unocss/unocss/issues"
+  },
+  "keywords": [],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "dev": "unbuild --stub",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.6.4",
+    "@types/node": "20.11.21",
+    "eslint": "8.57.0",
+    "eslint-plugin-format": "^0.1.0",
+    "esno": "4.0.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "typescript": "5.3.3",
+    "unbuild": "2.0.0"
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
+  }
+}
