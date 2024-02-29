@@ -1,4 +1,4 @@
 # stater CLI
 
-> [!WARN]
+> [!NOTE]
 > This project is beta...
