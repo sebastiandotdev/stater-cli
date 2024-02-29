@@ -1,3 +1,4 @@
-# stater-cli
+# stater CLI
 
-Starter cli is a command line to make boilerplate with your favorite tools
+> [!WARN]
+> This project is beta...
