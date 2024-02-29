@@ -26,11 +26,17 @@ devDependencies:
   '@types/node':
     specifier: 20.11.21
     version: 20.11.21
+  cac:
+    specifier: 6.7.14
+    version: 6.7.14
+  consola:
+    specifier: 3.2.3
+    version: 3.2.3
   eslint:
     specifier: 8.57.0
     version: 8.57.0
   eslint-plugin-format:
-    specifier: ^0.1.0
+    specifier: 0.1.0
     version: 0.1.0(eslint@8.57.0)
   esno:
     specifier: 4.0.0
@@ -2118,6 +2124,11 @@ packages:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
       semver: 7.6.0
+    dev: true
+
+  /cac@6.7.14:
+    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
+    engines: {node: '>=8'}
     dev: true
 
   /callsites@3.1.0:
