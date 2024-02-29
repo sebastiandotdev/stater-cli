@@ -23,9 +23,15 @@ devDependencies:
   '@types/jest':
     specifier: 29.5.12
     version: 29.5.12
+  '@types/minimist':
+    specifier: 1.2.5
+    version: 1.2.5
   '@types/node':
     specifier: 20.11.21
     version: 20.11.21
+  '@types/prompts':
+    specifier: 2.4.9
+    version: 2.4.9
   cac:
     specifier: 6.7.14
     version: 6.7.14
@@ -50,6 +56,12 @@ devDependencies:
   lint-staged:
     specifier: 15.2.2
     version: 15.2.2
+  minimist:
+    specifier: 1.2.8
+    version: 1.2.8
+  prompts:
+    specifier: 2.4.2
+    version: 2.4.2
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -1643,6 +1655,10 @@ packages:
       '@types/unist': 2.0.10
     dev: true
 
+  /@types/minimist@1.2.5:
+    resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
+    dev: true
+
   /@types/node@20.11.21:
     resolution: {integrity: sha512-/ySDLGscFPNasfqStUuWWPfL78jompfIoVzLJPVVAHBh6rpG68+pI2Gk+fNLeI8/f1yPYL4s46EleVIc20F1Ow==}
     dependencies:
@@ -1651,6 +1667,13 @@ packages:
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+    dev: true
+
+  /@types/prompts@2.4.9:
+    resolution: {integrity: sha512-qTxFi6Buiu8+50/+3DGIWLHM6QuWsEKugJnnP6iv2Mc4ncxE4A/OJkjuVOA+5X0X1S/nq5VJRa8Lu+nwcvbrKA==}
+    dependencies:
+      '@types/node': 20.11.21
+      kleur: 3.0.3
     dev: true
 
   /@types/resolve@1.20.2:
