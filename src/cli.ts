@@ -32,7 +32,7 @@ export default async function start() {
 
     console.log(argv)
     console.log(response)
-    console.log('Deploy')
+    console.log('Deploy TEST')
   }
   catch (error) {
     console.log((error as Error).message)
