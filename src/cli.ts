@@ -12,12 +12,28 @@ interface ArgvType {
 const argv = minimist<ArgvType>(process.argv.slice(2))
 
 export default async function start() {
-  const response = await prompts({
-    type: 'list',
-    name: 'test',
-    message: 'Test with prompt',
-  })
+  try {
+    const response = await prompts({
+      type: 'autocomplete',
+      name: 'templates',
+      initial: 1,
+      message: 'What template would you like to use today?',
+      suggest: async (input, choices) => {
+        const filteredCharacter = choices.filter(i => i.title.toLowerCase().includes(input.toLowerCase()))
 
-  console.log(argv)
-  console.log(response)
+        return filteredCharacter
+      },
+      choices: [
+        { title: 'React tw ts zustand' },
+        { title: 'React tw zustand', value: 'silver-fox' },
+        // { title: 'Grant', description: 'This option has a description.' },
+      ],
+    })
+
+    console.log(argv)
+    console.log(response)
+  }
+  catch (error) {
+    console.log((error as Error).message)
+  }
 }
