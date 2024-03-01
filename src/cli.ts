@@ -32,6 +32,7 @@ export default async function start() {
 
     console.log(argv)
     console.log(response)
+    console.log('Deploy')
   }
   catch (error) {
     console.log((error as Error).message)
