@@ -1,7 +1,7 @@
 {
-  "name": "stater-cli",
+  "name": "new-app",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "packageManager": "pnpm@8.15.4",
   "description": "Starter cli is a command line to make boilerplate with your favorite,tools",
   "author": {
@@ -45,11 +45,14 @@
     "build": "unbuild",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "lint": "eslint .",
+    "prepublishOnly": "pnpm run build",
     "dev": "unbuild --stub",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "changeset publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.6.4",
+    "@changesets/cli": "2.27.1",
     "@commitlint/cli": "19.0.1",
     "@commitlint/config-conventional": "19.0.0",
     "@swc/core": "1.4.2",
