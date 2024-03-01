@@ -26,7 +26,7 @@ export default async function start() {
       choices: [
         { title: 'React tw ts zustand' },
         { title: 'React tw zustand', value: 'silver-fox' },
-        // { title: 'Grant', description: 'This option has a description.' },
+        { title: 'Grant', description: 'This option has a description.' },
       ],
     })
 
