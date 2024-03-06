@@ -1,26 +1,30 @@
-name: Publish
+name: Github actions deploy CLI
 
 on:
   push:
     branches:
       - main
-
-concurrency: ${{ github.workflows }}-${{ github.ref }}
-
+  pull_request:
+    branches:
+      - main
 jobs:
   publish:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          cache: pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
 
-      - run: pnpm install
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install
+        run: pnpm install
 
       - name: Create Release Pull request or publish
         id: changesets
