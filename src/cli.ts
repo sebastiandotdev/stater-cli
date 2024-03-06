@@ -1,15 +1,4 @@
-import process from 'node:process'
-import minimist from 'minimist'
 import prompts from 'prompts'
-
-interface ArgvType {
-  h: string
-  help: string
-  v: string
-  version: string
-}
-
-const argv = minimist<ArgvType>(process.argv.slice(2))
 
 export default async function start() {
   try {
@@ -24,13 +13,11 @@ export default async function start() {
         return filteredCharacter
       },
       choices: [
-        { title: 'React tw ts zustand' },
-        { title: 'React tw zustand', value: 'silver-fox' },
-        { title: 'Grant', description: 'This option has a description.' },
+        { title: 'React with tailwind, typescript and zustand' },
+        { title: 'React with zustand y tailwind' },
       ],
     })
 
-    console.log(argv)
     console.log(response)
   }
   catch (error) {
