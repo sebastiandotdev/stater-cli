@@ -9,7 +9,7 @@ concurrency: ${{ github.workflows }}-${{ github.ref }}
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -20,13 +20,12 @@ jobs:
           node-version: 18.x
           cache: pnpm
 
-      - run: pnpm install
-
+      - run: pnpm install --frozen-lockfile
       - name: Create Release Pull request or publish
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm run deploy
+          publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
