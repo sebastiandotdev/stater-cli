@@ -2,3 +2,6 @@
 
 > [!NOTE]
 > This project is beta...
+
+
+## License
